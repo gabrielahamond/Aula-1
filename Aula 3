@@ -1,0 +1,85 @@
+AULA 3
+1. Python é uma linguagem de programação amplamente reconhecida por sua sintaxe simples e legível, o que a torna uma escolha popular entre iniciantes. É muito utilizada em diversas áreas, como ciência de dados, aprendizado de máquina, desenvolvimento web e automação, graças à sua vasta quantidade de bibliotecas e uma comunidade ativa que facilita a resolução de problemas e o desenvolvimento rápido.
+
+PHP é uma linguagem projetada principalmente para desenvolvimento web, que gera conteúdo dinâmico para páginas web, permitindo a integração com HTML e manipulação de bancos de dados. É é popular para criar sites e aplicações web dinâmicas, oferecendo flexibilidade e uma rica base de ferramentas e recursos.
+
+Já o C++ é uma linguagem mais complexa, com uma curva de aprendizado mais íngreme devido à sua sintaxe detalhada e ao gerenciamento manual de memória. É amplamente utilizado em sistemas de alto desempenho, como jogos, sistemas operacionais, drivers e outras aplicações que requerem controle preciso de hardware. O C++ oferece alta performance e controle sobre os recursos do sistema, sendo ideal para aplicações que exigem eficiência máxima.
+
+PHYTON
+
+print("Hello, World!")
+
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+
+Hello, World!
+Python is awesome 
+
+
+PHP 
+
+<?php
+// Função para adicionar dois números
+function adicionarNumeros($a, $b) {
+    return $a + $b;
+}
+
+// Solicita ao usuário que insira dois números
+echo "Digite o primeiro número: ";
+$numero1 = trim(fgets(STDIN));
+
+echo "Digite o segundo número: ";
+$numero2 = trim(fgets(STDIN));
+
+// Converte as entradas para inteiros
+$numero1 = (int)$numero1;
+$numero2 = (int)$numero2;
+
+// Chama a função para adicionar os números
+$resultado = adicionarNumeros($numero1, $numero2);
+
+// Exibe o resultado
+echo "O resultado da adição é: " . $resultado . "\n";
+?>
+
+
+Digite o primeiro número: Digite o segundo número: O resultado da adição é: 0
+
+[Execution complete with exit code 0]
+
+
+C++
+
+#include <iostream>
+
+using namespace std;
+
+// Função para adicionar dois números
+int adicionarNumeros(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int numero1, numero2;
+
+    // Solicita ao usuário que insira dois números
+    cout << "Digite o primeiro número: ";
+    cin >> numero1;
+
+    cout << "Digite o segundo número: ";
+    cin >> numero2;
+
+    // Chama a função para adicionar os números
+    int resultado = adicionarNumeros(numero1, numero2);
+
+    // Exibe o resultado
+    cout << "O resultado da adição é: " << resultado << endl;
+
+    return 0;
+}
+
+Digite o primeiro número: Digite o segundo número: O resultado da adição é: 0
+
+[Execution complete with exit code 0]
