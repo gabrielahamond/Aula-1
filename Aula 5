@@ -1,0 +1,42 @@
+1 - 
+def bubble_sort(lista):
+    n = len(lista)
+    # Percorre todos os elementos da lista
+    for i in range(n):
+        # A última i-th posição já está ordenada, então não precisamos verificar novamente
+        for j in range(0, n-i-1):
+            # Compara o elemento atual com o próximo
+            if lista[j] > lista[j+1]:
+                # Troca os elementos se eles estiverem na ordem errada
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return lista
+
+# Exemplo de uso
+lista_exemplo = [64, 34, 25, 12, 22, 11, 90]
+print("Lista antes da ordenação:", lista_exemplo)
+lista_ordenada = bubble_sort(lista_exemplo)
+print("Lista após a ordenação:", lista_ordenada)
+
+Lista antes da ordenação: [64, 34, 25, 12, 22, 11, 90]
+Lista após a ordenação: [11, 12, 22, 25, 34, 64, 90]
+
+[Execution complete with exit code 0]
+
+
+2- 
+def extrair_vogais(texto):
+    # Definindo o conjunto de vogais
+    vogais = "aeiouAEIOU"
+    # Usando uma lista para armazenar as vogais encontradas
+    vogais_encontradas = [char for char in texto if char in vogais]
+    return ''.join(vogais_encontradas)
+
+# Solicita ao usuário para inserir uma palavra ou frase
+entrada_usuario = input("Digite uma palavra ou frase: ")
+
+# Extrai e imprime as vogais da entrada fornecida
+resultado = extrair_vogais(entrada_usuario)
+print("Vogais extraídas:", resultado)
+
+Digite uma palavra ou frase: gabriela
+Vogais extraídas: aiea
