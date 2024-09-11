@@ -1,0 +1,113 @@
+1- 
+def imprimir_informacoes(nome, idade, cidade):
+    # Imprime as informações de forma formatada
+    print(f"Nome: {nome}", end=' | ')  # Usa ' | ' como separador entre as informações
+    print(f"Idade: {idade}", end=' | ') # Usa ' | ' como separador entre as informações
+    print(f"Cidade: {cidade}")          # Imprime a última informação e finaliza com uma nova linha
+
+# Exemplo de uso da função
+imprimir_informacoes("Alice", 30, "São Paulo")
+
+Nome: Alice | Idade: 30 | Cidade: São Paulo
+
+1- 
+def calculadora():
+    # Solicita ao usuário para inserir o primeiro número
+    num1 = float(input("Digite o primeiro número: "))
+    # Solicita ao usuário para inserir o segundo número
+    num2 = float(input("Digite o segundo número: "))
+    # Solicita ao usuário para inserir a operação desejada
+    operacao = input("Digite a operação desejada (+, -, *, /): ")
+
+    # Calcula e imprime o resultado com base na operação escolhida
+    if operacao == '+':
+        resultado = num1 + num2
+        print(f"Resultado: {num1} + {num2} = {resultado}")
+    elif operacao == '-':
+        resultado = num1 - num2
+        print(f"Resultado: {num1} - {num2} = {resultado}")
+    elif operacao == '*':
+        resultado = num1 * num2
+        print(f"Resultado: {num1} * {num2} = {resultado}")
+    elif operacao == '/':
+        if num2 != 0:
+            resultado = num1 / num2
+            print(f"Resultado: {num1} / {num2} = {resultado}")
+        else:
+            print("Erro: Divisão por zero não é permitida.")
+    else:
+        print("Operação inválida. Por favor, escolha entre +, -, * ou /.")
+
+# Chama a função para executar
+calculadora()
+
+Digite o primeiro número: 6
+Digite o segundo número: 10
+Digite a operação desejada (+, -, *, /): +
+Resultado: 6.0 + 10.0 = 16.0
+
+3- 
+def listar_compras():
+    # Solicita ao usuário para inserir os itens da lista de compras
+    entrada_usuario = input("Digite os itens da lista de compras, separados por vírgula: ")
+    
+    # Divide a entrada do usuário em uma lista de itens, removendo espaços extras
+    itens = [item.strip() for item in entrada_usuario.split(',')]
+    
+    # Imprime cada item em uma linha separada
+    print("Lista de compras:")
+    for item in itens:
+        print(item)
+
+# Chama a função para executar
+listar_compras()
+
+Digite os itens da lista de compras, separados por vírgula: banana
+Lista de compras:
+banana
+
+4-
+def celsius_para_fahrenheit():
+    # Solicita ao usuário para inserir a temperatura em graus Celsius
+    celsius = float(input("Digite a temperatura em graus Celsius: "))
+    
+    # Converte a temperatura para Fahrenheit usando a fórmula
+    fahrenheit = (celsius * 9/5) + 32
+    
+    # Imprime o resultado
+    print(f"A temperatura em Fahrenheit é: {fahrenheit:.2f}")
+
+# Chama a função para executar
+celsius_para_fahrenheit()
+
+Digite a temperatura em graus Celsius: 30
+A temperatura em Fahrenheit é: 86.00
+
+5- 
+def coletar_nomes():
+    nomes = []  # Lista para armazenar os nomes
+    
+    while True:
+        nome = input("Digite um nome (ou 'sair' para terminar): ").strip()  # Solicita ao usuário um nome e remove espaços extras
+        if nome.lower() == 'sair':  # Verifica se o nome digitado é 'sair' (não diferencia maiúsculas de minúsculas)
+            break  # Sai do loop se 'sair' for digitado
+        nomes.append(nome)  # Adiciona o nome à lista
+
+    # Imprime todos os nomes digitados, um por linha
+    print("\nNomes digitados:")
+    for nome in nomes:
+        print(nome)
+
+# Chama a função para executar
+coletar_nomes()
+
+
+Digite um nome (ou 'sair' para terminar): gabi
+Digite um nome (ou 'sair' para terminar): livia
+Digite um nome (ou 'sair' para terminar): joana
+Digite um nome (ou 'sair' para terminar): sair
+
+Nomes digitados:
+gabi
+livia
+joana
